@@ -1,13 +1,25 @@
 <html>
-<body>
+<head>
+</head>
+<body onload = "dostuff">
 
 <div id="test" class="t_class">INST377</div>
 
 <script>
-var t = document.getElementById("test").innerHTML;
-alert(t);
-console.log("The value of the TEST object is " + t);
+function dostuff(){
+  var t = document.getElementById("test").innerHTML;
+  alert(t);
+  console.log("The value of the TEST object is " + t);
+  document.getElementById("test").innerHTML = "HELLO I AM DYNAMIC!";
+  var f = document.getElementsByClassName("t_class");
+  document.getElementById("test1").innerHTML = "Hello? Did this work?";
+
+}
+
 </script>
+
+
+<div id = "test1" class = "t_class">Late DIV</div>
 
 </body>
 </html>

@@ -20,12 +20,12 @@
 		#square:hover{
 			cursor: pointer;
 		}
-		
+
 	</style>
 </head>
 
 <body>
-	
+
 	<!-- <div id="square" onclick="showSentence()"></div> -->
 	<div id="square" onclick="trigger()"></div>
 
@@ -65,6 +65,10 @@ function showSentence(url, func){
 
 function test1(xhttps){
 	document.getElementById("square").innerHTML = xhttps.responseText;
+	//var data = eval(xhtts.responseText);
+	var data = JSON.parse(xhttps.responseText); //parse will make sure if this is the JSON
+	//eval("alert('BOO! I could be bad!')");
+	alert("Response has " + data.length + "entries.")
 }
 
 function test2(xhttps){
